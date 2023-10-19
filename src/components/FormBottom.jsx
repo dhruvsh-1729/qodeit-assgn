@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap'
 const FormBottom = ({price}) => {
   return (
     <>
+    {/* displaying the updated price coming from props and the proceed to order button */}
     <div className="row">
     <div className="col-sm-3 mx-3 mt-2">
         <div className="text-center">Approx.price</div>

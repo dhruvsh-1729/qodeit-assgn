@@ -1,9 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import CustomButton from './CustomButton'
-import { upText, downText } from '../constants/data'
+import { upText, downText } from '../constants/data' //data hardcoded for the options as well as buttons
 
 const FormOptions = ({state,setState}) => {
     console.log(state);
+    // functions to handle change in active button 
     const changeUpIndex = (text)=>{
         console.log(text);
         const index = upText.indexOf(text);
@@ -20,6 +21,7 @@ const FormOptions = ({state,setState}) => {
 
     return (
         <>
+        {/* mapping on the upText and downText arrays to display the custom buttons */}
             <div className="mx-3 my-3 d-flex flex-row px-3">
                 {upText.map((text,i)=>{return(<CustomButton text={text} active={i===state["upActive"]?true:false} color={"white"}
                     activeColor={"black"} bgColor={"#9a71e0"} changeFunction={changeUpIndex}/>)})}
